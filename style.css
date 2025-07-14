@@ -171,3 +171,48 @@ main#home-page {
 .card-text {
   margin-bottom: 10px;
 }
+
+/* ================================ */
+/*              footer              */
+/* ================================ */
+/* footer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #000;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+.navbar ul li a:hover {
+  color: rgba(207, 219, 80, 0.95);
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.25);
+}
+
+p#copyrights {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+}
