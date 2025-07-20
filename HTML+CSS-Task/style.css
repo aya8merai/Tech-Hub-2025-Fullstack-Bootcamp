@@ -6,6 +6,11 @@
   color: #000;
 }
 
+.ar-font {
+  font-family: "Tajawal", Arial;
+  direction: rtl;
+}
+
 /* img {
   max-width: 100vw;
 } */
@@ -453,4 +458,44 @@ p#copyrights {
 .contact-form button:active {
   background-color: #cfdb50aa;
   color: #333;
+}
+
+/* ================================================== */
+/* ================================================== */
+/*                    LEARNED.HTML                   */
+/* ================================================== */
+/* ================================================== */
+
+#learned-main {
+  padding-bottom: 50px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.date-span {
+  color: #aaa;
+  font-size: 0.8rem;
+  padding: 5px 0;
+  border-radius: 5px;
+  width: 150px;
+  border-bottom: 2px solid #cfdb50;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  margin: 15px;
+  text-decoration: underline;
+  /* border-bottom: 1px solid #cfdb50; */
+  cursor: pointer;
+  color: #cfdb50;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.read-more:hover {
+  filter: drop-shadow(0 0 10px rgba(207, 219, 80, 0.95));
 }
