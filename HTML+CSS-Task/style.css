@@ -170,11 +170,17 @@
 }
 
 .card-text {
+  text-decoration: none;
   margin-bottom: 10px;
 }
 
 .card-text h3 {
+  text-decoration: none;
   margin: 10px 0 0px 0;
+}
+
+.card-text p {
+  text-decoration: none;
 }
 
 /* ================================ */
@@ -235,7 +241,7 @@ p#copyrights {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65)),
-    url("images/ir.jpg");
+    url("https://qaflab.com/wp-content/uploads/2024/03/ir.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -302,6 +308,7 @@ p#copyrights {
 }
 
 .images-container img {
+  object-fit: cover;
   width: 100%;
   height: auto;
   display: block;
@@ -367,6 +374,9 @@ p#copyrights {
   background-size: cover;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
+  border-bottom: 10px solid #cfdb50;
+  box-shadow: 0px 4px 10px rgba(207, 219, 80, 0.95);
+  margin-bottom: 15px;
 }
 
 #contact-main {
@@ -401,6 +411,7 @@ p#copyrights {
   font-size: 2rem;
   border-bottom: 3px solid #cfdb50;
   border-radius: 5px;
+  /* box-shadow: 0px 4px 5px -5px rgba(207, 219, 80, 0.95); */
   width: 300px;
   will-change: filter;
   transition: filter 300ms;
@@ -420,6 +431,7 @@ p#copyrights {
 
 .contact-form input,
 .contact-form textarea {
+  max-width: 88%;
   margin: 10px 30px;
   cursor: pointer;
   font-size: 1rem;
@@ -465,6 +477,15 @@ p#copyrights {
 /*                    LEARNED.HTML                   */
 /* ================================================== */
 /* ================================================== */
+.learned-bg-banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#0005, #000d, #0005),
+    url("https://statics.mylandingpages.co/static/aaanxdmf26c522mp/image/e95555ef2d434e21aae407d5252d3553.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 #learned-main {
   padding-bottom: 50px;
@@ -498,4 +519,9 @@ p#copyrights {
 
 .read-more:hover {
   filter: drop-shadow(0 0 10px rgba(207, 219, 80, 0.95));
+}
+
+a * {
+  text-decoration: none;
+  /* color: white; */
 }
