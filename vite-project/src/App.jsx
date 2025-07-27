@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import './App.css'
+import {
+  Grid,
+  Card,
+  CardContent
+} from "@mui/material";
 
 function App() {
   const [startIndex, setStartIndex] = useState(0);
@@ -41,27 +46,6 @@ function App() {
         <p>{'This may take a moment.'}</p>
       </> }
     </div>)
-    
-  //   const getData = async() => {
-  //     try {
-  //       const response = await fetch("https://jsonplaceholder.typicode.com/posts")
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! status: ${response.status}`);
-  //       }        
-  //       const json = await response.json()
-  //       setPostsData(json);
-  //       // console.log(response.data);
-  //     }
-  //     catch (error) {
-  //       console.error("Error fetching posts:", error);
-  //       setErrorMessage(error.message)
-  //     }
-  //   }
-  
-  // useEffect(() => {
-  //   getData()    
-  // }, [reloadState]);
-
   
   useEffect(() => {
     axios
@@ -91,19 +75,28 @@ function App() {
                   <NextButton/>                  
                 </div>
                 
-                <div className="posts-container gap20px">
+                {/* <div className="posts-container gap20px"> */}
+                  
+          <Grid container spacing={2}>
 
                 {postsData.map((post) => {
                     if (post.id > startIndex && post.id <= startIndex + postsLimit) 
                       return (        
-                        <div key={post.id} className="post-card">
-                          <h3><span>{post.id}: </span>{post.title}</h3>
-                          <p>{post.body}</p>
-                        </div>
+                        <Grid item xs={12} lg={6} sm={6} md={4} key={post.id}>
+                          <Card variant="outlined" sx={{ height: '90%' }} className="post-card">
+                            <CardContent key={post.id} >
+                                  {/* <div key={post.id} className="post-card"> */}
+                                    <h3><span>{post.id}: </span>{post.title}</h3>
+                                    <p>{post.body}</p>
+                                  {/* </div> */}
+                            </CardContent>
+                          </Card>
+                        </Grid>
                         )
                       }
-                    )}
-                    </div>
+                    )}  
+      </Grid>
+                    {/* </div> */}
                     <div className="nav-buttons">
                   <BackButton/>
                   <div className="pages-num">
@@ -113,7 +106,7 @@ function App() {
                   </div>
                   <NextButton/>
                 </div>
-              
+            
       </div>
       }
     </div>
